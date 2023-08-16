@@ -12,12 +12,12 @@ function App() {
   return (
     <div>
       <nav className="navbar navbar-expand navbar-dark bg-dark">
-        <a href="/tutorials" className="navbar-brand">
+        <a href="/posts" className="navbar-brand">
           TVT
         </a>
         <div className="navbar-nav mr-auto">
           <li className="nav-item">
-            <Link to={"/tutorials"} className="nav-link">
+            <Link to={"/posts"} className="nav-link">
               Posts
             </Link>
           </li>
@@ -32,9 +32,9 @@ function App() {
       <div className="container mt-3">
         <Routes>
           <Route path="/" element={<PostList/>} />
-          <Route path="/tutorials" element={<PostList/>} />
+          <Route path="/posts" element={<PostList/>} />
           <Route path="/add" element={<PostForm/>} />
-          <Route path="/tutorials/:id" element={<PostDetail/>} />
+          <Route path="/posts/:id" element={<PostDetail/>} />
         </Routes>
       </div>
     </div>

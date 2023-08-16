@@ -71,7 +71,7 @@ function PostDetail() {
         Request.remove(currentPost.id)
         .then((response: any) => {
             console.log(response.data);
-            navigate("/tutorials");
+            navigate("/posts");
         })
         .catch((e: Error) => {
             console.log(e);
