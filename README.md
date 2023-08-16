@@ -43,5 +43,3 @@
 - `tsconfig.json`: TypeScript configuration.
 - `package.json`: Lists project dependencies and scripts.
 
----
-
