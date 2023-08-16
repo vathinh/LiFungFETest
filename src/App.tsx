@@ -1,24 +1,42 @@
 import React from 'react';
-import logo from './logo.svg';
+import { Routes, Route, Link } from "react-router-dom";
+import PostList from "./components/PostList"
+import PostDetail from "./components/PostDetail"
+import PostForm from "./components/PostForm"
+
 import './App.css';
+import "bootstrap/dist/css/bootstrap.min.css";
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
+    <div>
+      <nav className="navbar navbar-expand navbar-dark bg-dark">
+        <a href="/tutorials" className="navbar-brand">
+          TVT
         </a>
-      </header>
+        <div className="navbar-nav mr-auto">
+          <li className="nav-item">
+            <Link to={"/tutorials"} className="nav-link">
+              Posts
+            </Link>
+          </li>
+          <li className="nav-item">
+            <Link to={"/add"} className="nav-link">
+              Add
+            </Link>
+          </li>
+        </div>
+      </nav>
+
+      <div className="container mt-3">
+        <Routes>
+          <Route path="/" element={<PostList/>} />
+          <Route path="/tutorials" element={<PostList/>} />
+          <Route path="/add" element={<PostForm/>} />
+          <Route path="/tutorials/:id" element={<PostDetail/>} />
+        </Routes>
+      </div>
     </div>
   );
 }
