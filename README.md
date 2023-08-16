@@ -12,7 +12,7 @@
 1. **Clone the Repository**:
    - Clone this repository to your local machine using:
      ```bash
-     git clone <repository-url>
+     git clone <https://github.com/vathinh/LiFungFETest.git>
      ```
    - Navigate to the project folder:
      ```bash
