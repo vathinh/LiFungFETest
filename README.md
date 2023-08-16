@@ -1,6 +1,6 @@
 ---
 
-# LiFung Front End Test
+## LiFung Front End Test
 
 ## Prerequisites
 
